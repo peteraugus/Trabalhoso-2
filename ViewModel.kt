@@ -45,6 +45,10 @@ class TasksViewModel : ViewModel() {
             } catch (e: Exception) {
                 // 3. Em caso de erro, atualiza o estado com a mensagem
                 _uiState.value = UiState.Error(e.message ?: "Erro desconhecido")
+
+                // build.gradle.kts
+implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.7.0")
+implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.7.0")
             }
         }
     }
